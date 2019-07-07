@@ -1,0 +1,33 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+html,body{
+	height: 100%;
+}
+a,u{
+	text-decoration: none;
+}
+img{
+	display: block;
+}
+ul,ol,li{
+	list-style:none;
+}
+b,strong,h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+i,em{
+	font-style: normal;
+}
+@mixin size($width : 100px,$height : 100px){
+	width : $width;
+ 	height : $height;
+ }
+
+ @mixin position($position,$left,$top){
+ 	position: $position;
+ 	left: $left;
+ 	top : $top;
+ }

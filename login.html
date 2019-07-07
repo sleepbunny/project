@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet"  href="src/sass/login.scss"/>
+	</head>
+	<body>
+		<div id="header_top">
+			<div class="header_top_box">
+				<ul class="header_top_left">
+					
+						<li>欢迎来到风尚购物</li>
+						
+							<li><a style="cursor: pointer;">登录</a></li>
+							<li><s class="line"></s></li>
+							<li><a href="#">注册</a></li>
+						
+						
+							
+						
+					
+				</ul>
+				<ul class="header_top_right">
+				   
+					<li class="hasSubMenu">
+						<a href="#">我的风尚<i class="toDown">&nbsp;</i></a><s  style="padding:0px 0px 0px 10px;">|</s>
+						<!-- <ul class="subMenu myFSMenu my_fsg">
+							<li><a href="http://www.fstvgo.com/MemberCenter/OrderList.aspx">我的订单</a></li>
+							<li><a href="http://www.fstvgo.com/MemberCenter/MemberFavorite.aspx">我的收藏</a></li>
+						</ul> -->
+					</li>
+					<li style="padding-left:12px;">4001-677-077<s style="padding:0px 10px 0px 10px;">|</s></li>
+					<li class="hasSubMenu">
+						<a href="#" target="_blank">客服中心<i class="toDown">&nbsp;</i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header_center">
+			<div class="w">
+				<h1 class="logo">
+					<a href="3" id="home" title="风尚">
+						<img src="img/FSLogo.png"></a>
+				</h1>
+				<div class="freeCarry">
+						<img src="img/freeCarry.jpg">
+				</div>
+
+			</div>
+		</div>
+		<!-- 表单 -->
+		<div class="w" id="entry">
+			<div class="mt">
+				<h1>用户登录<span id="spanSiteUrl" style="display: none;">http://www.fstvgo.com/</span></h1>
+			</div>
+        <div class="mc" style="padding-top: 15px;">
+            <div class="form">
+                <div class="item">
+                    <span class="label"><span class="spanAlert">*</span>手机号：</span>
+                    <div class="fl">
+                        <input name="ctl00$MainPlace$txt_UserName" type="text" id="MainPlace_txt_UserName" class="text">
+                        <span id="loginname_error"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label"><span class="spanAlert">*</span>密码/短信验证码：</span>
+                    <div class="fl">
+                        <input name="ctl00$MainPlace$txtConsumerID" type="hidden" id="MainPlace_txtConsumerID">
+                        <input name="ctl00$MainPlace$txt_Password" type="password" id="MainPlace_txt_Password" class="text">
+                        
+                        
+                        <label><a href="#">忘记密码?</a></label>
+                        <span id="loginpwd_error"></span>
+                    </div>
+                </div>
+                <div class="item" id="autoentry">
+                    <span class="label"><span class="spanAlert"></span>图片验证码：</span>
+                    <div class="fl">
+                        
+<!-- <style type="text/css">
+    .changeCode a:link,.changeCode a:visited
+{ text-decoration:none; color:#666;}
+.changeCode a:hover
+{ text-decoration:underline; color:#666;}
+.fl #MainPlace_VerifyControl1_ctl00_txt_Code
+{ border:1px solid #A5AFC3; height:24px; line-height:24px; padding-left:3px;}
+.password #MainPlace_VerifyControl1_ctl00_txt_Code
+{ border:1px solid #A5AFC3; height:24px; line-height:24px; padding-left:3px;}
+.middlebg #MainPlace_VerifyControl1_ctl00_txt_Code
+{ border:0; margin-left:6px; margin-top:6px;}
+</style> -->
+			<table style="float:left;" cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top;"><div class="inputbg2"><input name="ctl00$MainPlace$VerifyControl1$ctl00$txt_Code" type="text" maxlength="4" id="MainPlace_VerifyControl1_ctl00_txt_Code" style="width:80px;"></div></td>
+						<td style="vertical-align:top;"><span style="display:none"><img src= "img/ShowImage.jpg" id="img_code"></span></td>
+						<td style="vertical-align:middle; padding-left:3px;"><span>
+						<img id="MainPlace_VerifyControl1_ctl00_img_Code" onclick="ChangeVerifyImage('MainPlace_VerifyControl1_ctl00_img_Code','681689519','4');" src="ShowImage.aspx?RawUrl=/Customer/ConsumerLogin.aspx&amp;MaxLength=4&amp;RelationId=1278585051&amp;Control=VerifyControl1" style="height:24px;width:60px;"></span></td>
+						<td style="padding-left:3px;"><span class="changeCode"><a id="loginChangeImage" href="javascript:ChangeVerifyImage('MainPlace_VerifyControl1_ctl00_img_Code','681689519','4');">看不清，换一张</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+	
+
+
+                    <span class="sperror"></span>
+                 </div>
+                    <div class="fl" style="margin-left: 20px;margin-top:7px;">
+                        <button style="cursor: pointer;" id="btn_send_message">获取短信验证码</button>
+                        <label id="btn_send_message_show" style="display: none;">验证码已发送您的手机上，请查收<span id="cd_timer"></span>秒后可重新发送</label>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <span class="label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <div class="fl">
+                        <label class="mar">
+                            <input id="MainPlace_cbRemeberUser" type="checkbox" name="ctl00$MainPlace$cbRemeberUser"><label for="MainPlace_cbRemeberUser">记住用户名</label>
+                        </label>
+                        
+                    </div>
+                </div>
+                <div class="password_con">
+                    <div class="password_login">
+                        <span class="label_p">&nbsp;</span>
+                        <a class="btn-img btn-entry" id="loginsubmit" tabindex="8" onclick="CheckLogin();">登录</a>&nbsp;
+                        <img src="https://www.fstvgo.com/images/load/hig_progcircle_animated.gif" style="visibility: hidden;" id="spanLoginloading">
+                        <span style="display: none;">
+                            <input type="submit" name="ctl00$MainPlace$ib_OK2" value="" id="MainPlace_ib_OK2" class="dispalyno">
+                            <input type="submit" name="ctl00$MainPlace$ib_OK" value="" id="MainPlace_ib_OK" class="dispalyno"></span>
+                        
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                </div>
+                
+            </div>
+           
+
+            <div id="guide">
+                <h5>您还不是风尚购物用户？</h5>
+                <div class="content">现在免费注册成为风尚购物会员，便能立刻享受便宜又放心的购物体验。</div>
+                <a href="#" class="btn-link btn-personal">注册新用户</a>
+                <div class="btns" style="display: none"><a href="#" style="border-right: 1px dotted #BB2733; padding-right: 20px;">协议客户注册</a><a href="ConsumerRegister.aspx?CustomerType=2&amp;ReturnURL=http://www.fstvgo.com/" style="padding-left: 20px;">个人用户注册</a></div>
+               
+            </div>
+            
+            <div class="l_issueclr"></div>
+            <div class="l_issue" style="display: none;">
+                
+                <a href="#" target="_blank"></a>
+                
+            </div>
+           
+        </div>
+       
+    </div>
+	
+	<!-- 底部 -->
+			<div class="bottom_synopsis" id="footer_add_nav">
+				<div class="footer_add">
+				<div class="footer_img_right fl phone_synopsis_box">
+							<div class="fl index_icon bottom_synopsis_icon_02">&nbsp;</div>
+				
+							<div class="fl phone_synopsis">
+								<h3><a href="#" target="_blank">手机注册 一步搞定</a></h3>
+				
+								<p>输入手机号-输入验证码-获取手机</p>
+				
+								<p>验证码-设定密码-完成注册</p>
+							</div>
+				
+							<div class="crl">&nbsp;</div>
+						</div>
+				
+						<div class="footer_img_right fl tel_synopsis_box">
+							<div class="fl index_icon bottom_synopsis_icon_03">&nbsp;</div>
+				
+							<div class="fl tel_synopsis">
+								<h3><a href="#" target="_blank">型录/电商/新媒体视频招商加盟</a></h3>
+				
+								<p>柳小姐：0791-88110022-8126</p>
+							</div>
+				
+							<div class="crl">&nbsp;</div>
+						</div>
+				
+						<div class="footer_img_right fl qq_synopsis_box">
+							<div class="#">&nbsp;</div>
+				
+								<div class="fl qq_synopsis">
+								<h3><a href="#" target="_blank">在线客服</a></h3>
+				
+								<p>24小时客服热线:</p>
+				
+								<p>4001-677-077</p>
+						</div>
+				
+							<div class="crl">&nbsp;</div>
+						</div>
+				
+						<div class="crl">&nbsp;</div>
+					</div>
+				</div>
+				<div class="helpLink wp">
+	<div class="w clearfix">
+	<div class="FSIntro"><a href="#"><img alt="#" src="http://www.fstvgo.com/images/fengshangimg/FSBreif.jpg" /></a>
+	
+	<h4><a href="#" target="_blank">关于风尚购物</a></h4>
+	
+	<p>江西风尚电视购物股份有限公司于2009年9月28日正式成立，公司致力于现代家庭电视购物，是传媒和零售的完美组合。江西电视台风尚购物频道是经国家广电总局批准的全国性的、同时也是江西第一家真正的专业家庭电视购物频道。</p>
+	</div>
+	
+	<dl>
+		<dt>帮助中心</dt>
+		<dd><a href="#" target="_blank">购物流程</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">积分规则</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">积分绑定</a></dd>
+		<dd><a href="#" target="_blank">使用订单状态说明</a></dd>
+	</dl>
+	
+	<dl>
+		<dt>配送方式</dt>
+		<dd><a href="#" target="_blank">免费配送地区</a></dd>
+		<dd><a href="#" target="_blank">配送范围</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">收费标准</a></dd>
+	</dl>
+	
+	<dl>
+		<dt>支付方式</dt>
+		<dd><a href="#" target="_blank">货到付款</a></dd>
+		<dd><a href="#" target="_blank">银联支付</a></dd>
+		<dd><a href="#" target="_blank">支付宝</a></dd>
+		<dd><a href="#" target="_blank">微信支付</a></dd>
+	</dl>
+	
+	<dl>
+		<dt>客户服务</dt>
+		<dd><a href="#" target="_blank">售后及退换货</a></dd>
+		<dd><a href="#" target="_blank">在线客服</a></dd>
+	</dl>
+	
+	<dl>
+		<dt>会员中心</dt>
+		<dd><a href="#" target="_blank">资料修改</a></dd>
+		<dd><a href="#" target="_blank">找回密码</a></dd>
+		<dd><a href="#" target="_blank">会员等级</a></dd>
+		<dd><a href="#" target="_blank">会员权益 </a></dd>
+	</dl>
+	
+	<dl>
+		<dt>招商专区</dt>
+		<dd><a href="#" target="_blank">关于我们</a></dd>
+		<dd><a href="#" target="_blank">合作流程</a></dd>
+		<dd><a href="#" target="_blank">联系我们</a></dd>
+		<dd><a href="#" target="_blank">供应商系统</a></dd>
+	</dl>
+	</div>
+	</div>
+	
+	<div class="wp siteLink">
+	<p class="w"><a href="#">个人情报保护方针</a><s>|</s> <a href="#">负责条款</a><s>|</s> <a href="#">风尚购物使用条款</a><s>|</s> <a href="#">公司介绍</a><s>|</s> <a href="http://sighttp.qq.com/authd?IDKEY=95f7d0b0445338462cd9a255ec5f93f8d52e527e29d5192e">联系我们</a><s>|</s> <a href="http://sighttp.qq.com/authd?IDKEY=95f7d0b0445338462cd9a255ec5f93f8d52e527e29d5192e">人才招募</a></p>
+	
+	<p class="w"><a href="#" target="_blank">ICP经营许可证：赣ICP备15000001号</a></p>
+	
+	<p class="w"><a><img src="http://www.fstvgo.com/images/FS/unionpay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/alipay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/weChatPay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/ICPNum.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/TrustSite.jpg" /></a></p>
+	</div>
+	
+	<div class="wp copyRight">
+	<p class="w">Copyright 2008-2016，www.fstvgo.com 风尚购物 版权所有 本网站用字经北京北大方正电子有限公司授权许可</p>
+	</div>
+	
+	
+	
+	 
+	<script>
+	    var _hmt = _hmt || [];
+	    (function () {
+	        var hm = document.createElement("script");
+	        hm.src = "https://hm.baidu.com/hm.js?2b7cad57a58537bc2c4e2985d99a3f20";
+	        var s = document.getElementsByTagName("script")[0];
+	        s.parentNode.insertBefore(hm, s);
+	    })();
+	</script>
+	
+	<!--全站通用弹出窗口-->
+	<div style="display: none;" id="WinAlertDiv">
+	    <div class="WinAlertBox">
+	        <h2 class="WinAlertHead">
+	            <span>提示信息</span><a href="javascript:MessOrH(2);" style="color: rgb(255,255,255)">关闭</a><a
+	                href="javascript:MessOrH(2);"><img src="http://www.fstvgo.com/images//sort/xbclose.png"></a></h2>
+	        <div class="ECon">
+	            <p id="EconMsg" class="Econ_msg" style="padding-left: 8px;">
+	            </p>
+	            <p class="Econ_img">
+	            </p>
+	        </div>
+	    </div>
+	</div>
+	
+	
+	
+	
+	   
+	    
+	<div id='BrowseProcess' style='display:none' ClientIp='171.117.44.208'Url='http%3a%2f%2fwww.fstvgo.com%2fGoods%2fItemClassList.aspx%3fClassId%3d207%26ChannelId%3d%26PageNo%3d%26ItemPerPage%3d%26IsNewStyleOnly%3d%26IsSpecialPriceOnly%3d%26IsGpOnly%3d%26IsSortASC%3d1%26TradeMarkId%3d%26Material%3d%26SortField%3d%26FieldIds%3d0%26OptionIds%3d0%26ShowType%3d%26PageType%3d0%26clientId%3d01%26sizeId%3d%26colorId%3d'Browser='Firefox67.0'IsMobile='N'BISiteDomain='fstvgo.com'LanguageCode='zh-CN'OperationSystemCode='WinNT'RefererUrl='http://www.fstvgo.com/'></div></form>
+	
+		</body>
+	</html>

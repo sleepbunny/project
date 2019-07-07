@@ -1,0 +1,952 @@
+@import '_public.scss';
+//右侧边栏
+.siderFix_index {
+    display: block;
+    position: fixed;
+    height: 100%;
+    z-index: 9999;
+    top: 0px;
+    width: 36px;
+    right: 0;
+    color: #fff;
+    background: #888;
+	li{
+    padding: 0 4px;
+		a{
+		position: relative;
+		z-index: 1000;
+		color: #eee;
+		display: block;
+		padding: 20px 3px;
+		width: 20px;
+		border-top: 1px solid #fff;
+		text-align: center;
+		line-height: 20px;
+		padding-bottom: 12px;
+			.memberShip{
+				display: block;
+				@include size(23px,23px);
+				//height: 23px;
+				//width: 23px;
+				margin-bottom: 5px;
+				// background: url(../images/memberShip.png) no-repeat 0px center;
+			}
+			.cartIcon {
+				// background: url(../images/shoppingCart.png) no-repeat 0px center;
+				display: block;
+				@include size(23px,23px);
+				//height: 23px;
+				//width: 23px;
+				margin-bottom: 5px;
+			}
+			span{
+				display: block;
+				border-radius: 30px;
+				@include size(20px,20px);
+				//height: 20px;
+				//width: 20px;
+				background-color: #f43600;
+				text-align: center;
+				line-height: 20px;
+				margin-top: 5px;
+			}
+			.message{
+				//background: url(../images/message.png) no-repeat 0px center;
+				display: block;
+				@include size(23px,23px);
+				//height: 23px;
+				//width: 23px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+
+#header_top {
+    //width: 100%;
+    //height: 36px;
+	@include size(100%,36px);
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f2f2f2;
+    position: relative;
+	.header_top_box {
+	    //height: 36px;
+	    line-height: 36px;
+	    margin: 0 auto;
+	    // width: 1180px;
+		@include size(1180px,36px);
+		background-color: #f2f2f2;
+		.header_top_left {
+		    float: left;
+			//width: 210px;
+			@include size(210px,36px);
+			line-height: 36px;
+			font-size: 12px;
+			li {
+			    float: left;
+			    margin-left: 10px;
+			}
+		}
+		.header_top_right{
+			float: right;
+			@include size(285px,28px);
+			//height: 28px;
+			//width: 285px;
+			li{
+				float: left;
+				display: inline;
+				height: 28px;
+				font-size: 12px;
+				color: #6c6c6c;
+			}
+		}
+	}
+}
+.header_center{
+	height: 155px;
+	border-bottom: 3px solid #fc4c65;
+	position: relative;
+	background: #fff;
+	margin: 0 auto;
+	.w{
+		width: 1200px;
+		margin: 0 auto;
+		clear: both;
+		position: relative;
+		.logo{
+			float: left;
+			//margin-top: 32px;
+			height: 125px;
+			line-height: 125px;
+			margin-right: 70px;
+			img{
+				vertical-align: middle;
+				padding-top: 30px;
+			}
+		}
+		.searchCon {
+			float: left;
+			margin-top: 45px;
+			width: 580px;
+			padding-left: 200px;
+			.searchBar {
+				@include size(574px,34px);
+				//height: 34px;
+				//width: 574px;
+				overflow: hidden;
+				border: 3px solid #fc4c65;
+				border-radius: 4px;
+				font-size: 12px;
+				font-family: "microsoft yahei";
+				.searchInput {
+					float: left;
+					@include size(470px,34px);
+					//height: 34px;
+					//width: 470px;
+					padding-left: 4px;
+					border: 0px;
+					color: #999;
+					line-height: 34px;
+				}
+				.searchBtn{
+					float: left;
+					border: 0px;
+					@include size(100px,34px);
+					//width: 100px;
+					//height: 34px;
+					line-height: 34px;
+					background-color: #fc4c65;
+					color: #fff;
+					font-size: 18px;
+					cursor: pointer;
+					font: 14px/1.5 'Microsoft YaHei', Helvetica, Arial, “宋体″, sans-serif;
+				}
+			.hotSearch {
+				//height: 24px;
+				line-height: 24px;
+				//width: 580px;
+				@include size(580px,24px);
+				overflow: hidden;
+				a {
+					margin-right: 6px;
+					color: #999;
+				}
+			}
+			
+		}
+		.Cart {
+			float: right;
+			border: 1px solid #d8d8d8;
+			background-color: #f9f9f9;
+			@include size(130px,38px);
+			//width: 130px;
+			//height: 38px;
+			line-height: 38px;
+			margin-top: 45px;
+			position: relative;
+				a {
+				font: 14px/1 "黑体",宋体, sans-serif;
+				@include position(absolute,50%,0px);
+				//position: absolute;
+				//top: 50%;
+				//left: 0;
+				height: 14px;
+				margin-top: -7px;
+			}
+		}
+	}
+	.navbar{
+	@include size(1200px,30px);	
+    position: relative;
+    //height: 30px;
+    line-height: 30px;
+	//width: 1200px;
+	margin: 0 auto;
+	clear: both;
+	position: relative;
+		.category {
+		@include size(205px,38px);
+		//width: 205px;
+		text-align: center;
+		background-color: #fc4c65;
+		position: absolute;
+		bottom: -2px;
+		float: left;
+		//height: 38px;
+		line-height: 40px;
+			a {
+				color: #fff;
+				font-size: 16px;
+					.toDown {
+						word-spacing: 1em;
+						background: url(../images/fengshangimg/whiteToDown.png) no-repeat right center;
+				}
+			}
+	}
+		.nav {
+			@include position(absolute,210px,-8px);
+		//position: absolute;
+		//left: 210px;
+		//top: -8px;
+		li {
+			padding: 5px 24px;
+			margin: 0px 14px;
+			font-size: 16px;
+			float: left;
+			a:link{
+				color: #777777;
+				text-decoration: none !important;
+			}
+		}
+	}
+}
+}
+.bg_f5 {
+    background-color: #f5f5f5;
+		#item-head {
+		width: 1200px;
+		margin: 0 auto;
+		.mod_search_crumb {
+			position: relative;
+			
+			height: 24px;
+			border-top: 1px solid #f5f5f5;
+			border-bottom: 1px solid #f5f5f5;
+			font-family: "Microsoft Yahei";
+			
+			padding: 8px 0;
+			.crumbSlide {
+				height: 24px;
+				line-height: 24px;
+				
+				margin: 0 220px 0 10px;
+				position: relative;
+				li {
+					float: left;
+					font-family: "黑体";
+				}
+			}
+		}
+		.item-info {
+			width: 1198px;
+			
+			margin-top: 12px;
+			padding: 20px 0;
+			
+			background-color: #fff;
+			.item-pic {
+				padding: 9px 9px 9px 0;
+				float: left;
+				@include position(absolute,500px,400px);
+				//width: 500px;
+				//height: 400px;
+				font-size: 12px;
+				font-family: "microsoft yahei";
+				a {
+					color: #333;
+				}
+			}
+			.itembase-info {
+				float: left;
+				width: 438px;
+				.i-name {
+					overflow: hidden;
+					width: 442px;
+					font: 16px/30px "黑体";
+					border-bottom: 1px dotted #000;
+					padding-bottom: 10px;
+					 h2 {
+						font-size: 17px;
+					}
+				}
+				span {
+					display: block;
+					margin: 6px 0;
+					margin-left: 6px;
+				}
+				.i_cuxiao_price {
+					@include size(100%,112px);
+					//width: 100%;
+					//height: 112px;
+					position: relative;
+					.i-prices {
+						width: 442px;
+						background-color: #f3f3f3;
+						padding: 5px 0px;
+						overflow: hidden;
+						position: absolute;
+						top: 0;
+						ul {
+							float: left;
+							 li {
+								float: left;
+								
+								padding-left: 6px;
+								font-size: 12px;
+								line-height: 18px;
+								width: 100%;
+								div:first-child {
+									font-size: 14px;
+									
+									float: left;
+									padding: 9px 0;
+									margin-right: 8px;
+									span {
+										float: left;
+										margin-right: 2px;
+										font-size: 14px;
+										letter-spacing: 4px;
+									}
+									.p-price {
+										font-size: 12px;
+										line-height: 18px;
+										color: #000;
+										float: left;
+									}
+								}
+								
+							}
+							.i-choose {
+								width: 100%;
+								float: left;
+								padding: 9px 0;
+								position: relative;	
+								padding-left: 6px;
+								p{
+									float: left;
+								}
+								 div {
+									display: table;
+									margin-left: 60px;
+									margin-bottom: 6px;
+									span:first-child {
+										float: left;
+										margin: 0 6px;
+										border: 1px solid red;
+										background-color: #d91404;
+										color: #fff;
+									}
+									dl {
+										margin-left: 42px;
+										width: 318px;
+										position: relative;
+										overflow: hidden;
+										dd{
+											color: #333;
+											font-size: 12px;
+											font-family: "microsoft yahei";
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.i-choose {
+					width: 100%;
+					float: left;
+					padding: 9px 0;
+					
+					padding-left: 6px;
+				}
+				.fl {
+					float: left;
+					display: inline;
+					#summary-stock-list {
+						overflow: visible;
+						margin-top: -6px;
+						.dt {
+							font-family: simsun;
+							line-height: 34px;
+							float: left;
+							width: 42px;
+							text-align: right;
+						}
+						.dd {
+							margin-top: 5px;
+							#store-selector {
+								position: relative;
+								float: left;
+								z-index: 3;
+								height: 26px;
+								margin-right: 6px;
+								.text {
+									line-height: 23px;
+									float: left;
+									position: relative;
+									top: 0;
+									height: 23px;
+									background: #fff;
+									border: 1px solid #CECBCE;
+									padding: 0 15px 0 15px;
+									
+									overflow: hidden;
+								}
+							}
+							#store-prompt {
+								line-height: 25px;
+							}
+						}
+					}
+				}
+				.i-choose-qty {
+					height: 30px;
+					margin-top: 6px;
+					clear: both;
+					float: left;
+					a {
+						display: block;
+						@include size(26px,30px);
+						//width: 26px;
+						//height: 30px;
+						float: left;
+						font-weight: normal;
+						background-color: #dedede;
+						font-size: 26px;
+						line-height: 28px;
+						margin: 0 auto;
+						text-align: center;
+						
+						border: 1px solid #dedede;
+					}
+					a:link {
+						color: #777777;
+						text-decoration: none !important;
+					}
+					input {
+						display: block;
+						@include size(60px,30px);
+						//width: 60px;
+						//height: 30px;
+						font-size: 14px;
+						line-height: 30px;
+						float: left;
+						text-align: center;
+						color: #333;
+						border: 1px solid #dedede;
+					}
+				}
+				.i-choose-stock {
+					float: left;
+					height: 30px;
+					margin-top: 6px;
+					line-height: 30px;
+					
+				}
+				.i-btn {
+					margin-top: 14px;
+					height: 30px;
+					float: left;
+					clear: both;
+					a {
+						background-color: #2ca530;
+						display: block;
+						float: left;
+						padding: 0px 18px;
+						background-color: #fc4c65;
+						height: 30px;
+						color: #fff;
+						margin-right: 19px;
+						font: 14px/30px "黑体";
+					}
+				}
+			}
+			
+			
+			.shop-info {
+				margin: 10px 0 10px 51px;
+				width: 200px;
+				float: left;
+				.shopbase-info {
+					padding: 10px 8px;
+					border-left: 1px solid #eee;
+					border-right: 1px solid #eee;
+					border-top: 1px solid #eee; 
+					h3 {
+						font-size: 12px;
+						line-height: 28px;
+						p {
+							text-align: center;
+							font-size: 16px;
+						}
+						span {
+							display: block;
+							text-align: center;
+						}
+					}						
+				}
+				.s-service {
+					border-top: 1px solid #eee; 
+					a:link{
+						color: #777777;
+						text-decoration: none !important;
+						.tvhistory {
+							height: 30px;
+							border: 1px solid #eee;
+							border-radius: 1px;
+							color: #060606;
+							text-align: center;
+							line-height: 30px;
+							margin-top: 15px;
+							text-decoration: underline;
+							background: #f3f3f3;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.items-d {
+	@include size(1200px,auto);
+    //width: 1200px;
+    //height: auto;
+    margin: 20px auto;
+    overflow: hidden;
+	.items-d-boxl {
+		float: left;
+		@include size(222px,auto);
+		//width: 222px;
+		//height: auto;
+		overflow: hidden;
+		display: inline-block;
+		.boxl {
+			width: 220px;
+			background-color: #fff;
+			border-top: 2px solid #fc4c65;
+			border-left: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+			margin-bottom: 20px;
+			.mt{
+				height: 36px;
+				line-height: 36px;
+				padding-left: 10px;
+				margin-bottom: 10px;
+				background-color: #f8f8f8;
+				cursor: default;
+				h3 {
+					font-family: "Microsoft YaHei";
+					font-size: 14px;
+					font-weight: bold;
+					color: #666;
+				}
+			}
+			.mc {
+				padding: 3px 12px;
+				overflow: hidden;
+				ul {
+					max-height: 524px;
+					overflow: hidden;
+					
+					overflow-y: scroll;
+					margin-right: -30px;
+					padding-right: 18px;
+					 li {
+						padding: 14px 0;
+						border-bottom: 1px dashed #ccc;
+						overflow: hidden;
+						.p-img {
+							width: 100%;
+							padding: 0;
+							text-align: center;
+							position: relative;
+							margin-bottom: 10px;
+							a:link{
+								color: #777777;
+								
+							}
+						}
+						.p-name {
+							height: 36px;
+							line-height: 18px;
+							margin-bottom: 10px;
+							overflow: hidden;
+							display: block;
+							font-family: '宋体';
+							text-align: center;
+							a:link{
+								color: #777777;
+								
+							}
+						}
+						.p-price {
+							height: 16px;
+							line-height: 16px;
+							text-align: center;
+							margin-bottom: 10px;
+							color: #ccc;
+							.price {
+								font-size: 14px;
+								color: #d91404;
+								font-weight: bold;
+							}
+						}
+					}
+				}
+			}
+		}
+		.boxl {
+			width: 220px;
+			background-color: #fff;
+			border-top: 2px solid #fc4c65;
+			border-left: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+			margin-bottom: 20px;
+			.mt {
+				height: 36px;
+				line-height: 36px;
+				padding-left: 10px;
+				margin-bottom: 10px;
+				background-color: #f8f8f8;
+				cursor: default;
+				h3 {
+					font-family: "Microsoft YaHei";
+					font-size: 14px;
+					font-weight: bold;
+					color: #666;
+				}
+			}
+			.mc {
+				padding: 3px 12px;
+				ul {
+					max-height: 524px;
+					overflow: hidden;
+					
+					overflow-y: scroll;
+					margin-right: -30px;
+					padding-right: 18px;
+					li {
+						padding: 14px 0;
+						border-bottom: 1px dashed #ccc;
+						overflow: hidden;
+						a:link{
+							color: #777777;
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	.items-d-box {
+		width: 960px;
+		float: right;
+		background-color: #fff;
+		margin: 0 auto;
+		display: inline-block;
+		.items-d-nav {
+			height: 38px;
+			margin-top: 6px;
+			.ct-nav {
+				height: 36px;
+				border-bottom: 1px solid #ddd;
+				.hit {
+					height: 34px;
+					line-height: 34px;
+					border-bottom: 1px solid #fff;
+					margin-left: -1px;
+					margin-top: -6px;
+					cursor: pointer;
+					color: #ff6700;
+					background: #fff;
+					border-radius: 0;
+					float: left;
+					margin: 0 2px 0 0;
+					a {
+						height: 41px;
+						line-height: 41px;
+						padding: 0 12px;
+						border: 0;
+						border-left: 1px solid #ddd;
+						border-right: 1px solid #ddd;
+						border-top: 2px solid #fc4c65;
+						cursor: pointer;
+						color: #000;
+						
+						background: #fff;
+						float: left;
+						text-align: center;
+						font: 700 15px/30px '宋体';
+						display: block;
+						margin: 0 6px;
+					}
+				}
+				li {
+					float: left;
+					margin: 0 2px 0 0;
+					height: 20px;
+					min-width: 90px;
+					border-radius: 10px;
+					a {
+
+						float: left;
+						text-align: center;
+						height: 30px;
+						padding: 5px 13px;
+						font: 700 15px/30px '宋体';
+						display: block;
+						margin: 0 6px;
+
+					}
+					a:link{
+						color: #777777;
+						text-decoration: none !important;
+
+					}
+				}
+			}
+		}
+	}
+}
+/* 底部 */
+.bottom_synopsis {
+    /* background: #efefef; */
+    padding: 25px 0px;
+    width: 100%;
+    margin-top: 50px; 
+	.footer_add {
+	     width: 1200px;
+	     margin: 0 auto;
+	     padding-left: 42px;
+		 .phone_synopsis_box{
+		 	margin-right: 85px;
+		 	display: inline;
+			 .index_icon {
+				@include size(65px,65px);
+			    //width: 65px;
+			    //height: 65px;
+			    margin-top: 2px;
+			    background-image: url(../img/index_icon.png);
+			    background-repeat: no-repeat;
+				.phone_synopsis{
+					float: left;
+					h3 {
+					    font-size: 16px;
+					    color: #595757;
+					    height: 30px;
+					    line-height: 30px;
+						a {
+						    font-size: 17px;
+						    color: #595757;
+						    height: 30px;
+						    line-height: 30px;
+						    text-decoration: none;
+						    font-weight: 700;
+						    font-family: "黑体";
+						}
+						
+					}
+					p {
+					    font-size: 12px;
+					    color: #595757;
+					    height: 20px;
+					    line-height: 20px;
+					}
+				}
+			} 
+		 }
+		 .tell_synopsis_box{
+		 	
+		 	display: inline;
+			float: left;
+			margin-right: 116px;
+			.bottom_synopsis_icon_03{
+				margin-left: 20px;
+				display: inline;
+				float: left;
+				@include size(65px,65px);
+				//width: 65px;
+				//height: 65px;
+				margin-top: 2px;
+				background-position: -98px -130px;
+				background-repeat: no-repeat;
+			}
+			.tel_synopsis{
+				margin-left: 20px;
+				float: left;
+				display: inline;
+				h3 {
+					font-size: 16px;
+					color: #595757;
+					height: 30px;
+					line-height: 30px;
+					a {
+					font-size: 17px;
+					color: #595757;
+					height: 30px;
+					line-height: 30px;
+					text-decoration: none;
+					font-weight: 700;
+					font-family: "黑体";
+					
+				}
+				}
+				p{
+					font-size: 12px;
+					color: #595757;
+					height: 20px;
+					line-height: 20px;
+				}
+			}
+		 }
+		 .qq_synopsis_box{
+		 	margin-right: 85px;
+		 	display: inline;
+			float: left;
+			.bottom_synopsis_icon_04{
+				float: left;
+				@include size(65px,65px);
+				//width: 65px;
+				//height: 65px;
+				margin-top: 2px;
+				background-image: url(../Images/FS/index_icon.png);
+				background-repeat: no-repeat;
+			}
+			.qq_synopsis{
+				float: left;
+				h3{
+					font-size: 16px;
+					color: #595757;
+					height: 30px;
+					line-height: 30px;
+					 a {
+						font-size: 17px;
+						color: #595757;
+						height: 30px;
+						line-height: 30px;
+						text-decoration: none;
+						font-weight: 700;
+						font-family: "黑体";
+						}
+					}
+				p{
+						font-size: 12px;
+						color: #595757;
+						height: 20px;
+						line-height: 20px;
+				}
+			
+			}
+			}
+		 }
+	 }
+}
+.helpLink {
+	width: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+    font-size: 14px;
+	.w {
+		width: 1200px;
+		margin: 0 auto;
+		clear: both;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		.FSIntro {
+			width: 418px;
+			float: left;
+			margin-right: 50px;
+			h4 {
+				font-size: 15px;
+				font-weight: bold;
+				color: #fd3502;
+				height: 30px;
+				line-height: 30px;
+			}
+			p {
+				line-height: 24px;
+				font-family: 'Microsoft YaHei';
+				font-size: 13px;
+			}
+		}
+		dl {
+			float: left;
+			margin-right: 4px;
+			dt {
+				font-size: 16px;
+				font-family: "黑体";
+				line-height: 30px;
+				width: 118px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				font-weight: 700;
+				dd {
+					line-height: 24px;
+					width: 118px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}
+.siteLink {
+    background-color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+	width: 100%;
+	.w{
+		@include size(1200px,36px);
+		text-align: center;
+		line-height: 36px;
+		//height: 36px;
+		margin: 20px auto;
+		//width: 1200px;
+		margin: 0 auto;
+		clear: both;
+		position: relative;
+	}
+}
+.copyRight{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f12e24;
+    color: #fff;
+}
