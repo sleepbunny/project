@@ -75,6 +75,7 @@
     clear: both;
 	position: relative;	
 	color: #333;
+	border: 1px solid black;
 	.mt {
 		@include size(998px,37px);
 	    //height: 37px;
@@ -119,20 +120,17 @@
 				    float: left;
 					margin-left: 20px;
 					margin-top: 7px;
-					font-size: 6px;
+					font-size: 12px;
 				}
+			}	
 				
 			.password_con {
-				@include size(515px,31px);
-			    //height: 31px;
+				@include size(515px,31px);			    
 			    line-height: 31px;
-			    margin-top: 20px;
-			    //width: 515px;
+			    margin-top: 20px;							   
 				.password_login {
 					@include size(240px,31px);
-				    //width: 240px;
-				    float: left;
-				    //height: 31px;
+				    float: left;				   
 				    line-height: 31px;
 				    font-size: 12px;
 					.label_p {
@@ -143,33 +141,36 @@
 					    font-size: 12px;
 					}
 					.btn-entry {
-					    display: inline-block;
-						@include size(500px,400px);
-					    //width: 500px;
-					    //height: 400px;
-					    background-color: #fc4c65;
-					    font-size: 14px;
-					    font-weight: bold;
-					    color: #fff;
-					    line-height: 31px;
-					    text-decoration: none;
+					display: inline-block;
+					 @include size(85px,31px);
+					 background-color: #fc4c65;
+					font-size: 14px;
+					font-weight: bold;
+					color: #fff;
+					line-height: 31px;
+					text-decoration: none;
+					cursor: pointer;
+					overflow: hidden;
+					text-align: center;
+					display: inline-block;
+					
+						text-align: center;
 					}
 					.btn-img {
-					    cursor: pointer;
-					    overflow: hidden;
-					    margin: 0;
-					    padding: 0;
-					    border: 0;
-					    text-align: center;
+						cursor: pointer;
+						overflow: hidden;
+						margin: 0;
+						padding: 0;
+						border: 0;
+						text-align: center;
 					}
+					
 				}
 			}
-			}
 			
-		}
-		
-	
-	
+			
+		}	
+	}
 	}
 	#guide {
 	    float: left;
@@ -203,140 +204,62 @@
 		    text-align: center;
 		}
 		
-	}
+	
 }
 /* 底部 */
 .bottom_synopsis {
-    /* background: #efefef; */
+   
     padding: 25px 0px;
     width: 100%;
-    margin-top: 50px; 
-	.footer_add {
-	     width: 1200px;
-	     margin: 0 auto;
-	     padding-left: 42px;
-		 .phone_synopsis_box{
-		 	margin-right: 85px;
-		 	display: inline;
-			 .index_icon {
-				@include size(65px,65px);
-			    //width: 65px;
-			    //height: 65px;
-			    margin-top: 2px;
-			    background-image: url(../img/index_icon.png);
-			    background-repeat: no-repeat;
-				.phone_synopsis{
-					float: left;
-					h3 {
-					    font-size: 16px;
-					    color: #595757;
-					    height: 30px;
-					    line-height: 30px;
-						a {
-						    font-size: 17px;
-						    color: #595757;
-						    height: 30px;
-						    line-height: 30px;
-						    text-decoration: none;
-						    font-weight: 700;
-						    font-family: "黑体";
-						}
-						
-					}
-					p {
-					    font-size: 12px;
-					    color: #595757;
-					    height: 20px;
-					    line-height: 20px;
-					}
-				}
-			} 
-		 }
-		 .tell_synopsis_box{
-		 	
-		 	display: inline;
-			float: left;
+    margin-top: 50px;
+		.footer_add {
+		width: 1200px;
+		margin: 0 auto;
+		padding-left: 42px;
+		height: 70px;
+			.footer_img_right {
 			margin-right: 116px;
-			.bottom_synopsis_icon_03{
-				margin-left: 20px;
-				display: inline;
-				float: left;
-				@include size(65px,65px);
-				//width: 65px;
-				//height: 65px;
-				margin-top: 2px;
+			 .index_icon {
+					width: 65px;
+					height: 65px;
+					margin-top: 2px;
+					background-image: url(../img/43.png);
+					background-repeat: no-repeat;
+				}
+			.crl {
+				clear: both;
+				display: block;
+				height: 0px;
+			}
+		}
+			.bottom_synopsis_icon_02 {
+				background-position: -98px -65px;
+			}
+			.bottom_synopsis_icon_03 {
 				background-position: -98px -130px;
-				background-repeat: no-repeat;
 			}
-			.tel_synopsis{
-				margin-left: 20px;
-				float: left;
-				display: inline;
-				h3 {
-					font-size: 16px;
-					color: #595757;
-					height: 30px;
-					line-height: 30px;
-					a {
-					font-size: 17px;
-					color: #595757;
-					height: 30px;
-					line-height: 30px;
-					text-decoration: none;
-					font-weight: 700;
-					font-family: "黑体";
+			.bottom_synopsis_icon_04 {
+				background-position: -98px -195px;
+			}
 					
-				}
-				}
-				p{
-					font-size: 12px;
-					color: #595757;
-					height: 20px;
-					line-height: 20px;
-				}
-			}
-		 }
-		 .qq_synopsis_box{
-		 	margin-right: 85px;
-		 	display: inline;
+		.fl {
 			float: left;
-			.bottom_synopsis_icon_04{
-				float: left;
-				@include size(65px,65px);
-				//width: 65px;
-				//height: 65px;
-				margin-top: 2px;
-				background-image: url(../Images/FS/index_icon.png);
-				background-repeat: no-repeat;
+			display: inline;
+			margin-left: 10px;
+			h3{
+				font-size: 16px;
+				color: #595757;
+				height: 30px;
+				line-height: 30px;
 			}
-			.qq_synopsis{
-				float: left;
-				h3{
-					font-size: 16px;
-					color: #595757;
-					height: 30px;
-					line-height: 30px;
-					 a {
-						font-size: 17px;
-						color: #595757;
-						height: 30px;
-						line-height: 30px;
-						text-decoration: none;
-						font-weight: 700;
-						font-family: "黑体";
-						}
-					}
-				p{
-						font-size: 12px;
-						color: #595757;
-						height: 20px;
-						line-height: 20px;
-				}
-			
+			 p{
+				font-size: 12px;
+				color: #595757;
+				height: 20px;
+				line-height: 20px;
 			}
-			}
-		 }
-	 }
+		}
+	}
 }
 .helpLink {
 	width: 100%;
@@ -354,7 +277,16 @@
 			width: 418px;
 			float: left;
 			margin-right: 50px;
-			h4 {
+			a:link{
+				color: #777777;
+				text-decoration: none !important;
+				 img {
+					float: left;
+					margin-right: 10px;
+					height: 122px;
+				}
+			}
+			h4{
 				font-size: 15px;
 				font-weight: bold;
 				color: #fd3502;
@@ -365,6 +297,7 @@
 				line-height: 24px;
 				font-family: 'Microsoft YaHei';
 				font-size: 13px;
+				display: inline;
 			}
 		}
 		dl {
@@ -379,12 +312,14 @@
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				font-weight: 700;
+				color: #595757;
 				dd {
 					line-height: 24px;
 					width: 118px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
+					color: #595757;
 				}
 			}
 		}
@@ -405,6 +340,42 @@
 		margin: 0 auto;
 		clear: both;
 		position: relative;
+		
+		a{
+			color: #333;
+			// float: left;
+			margin: 0 auto;
+			img{
+				vertical-align: bottom;
+				
+			}
+		}
+	}
+	.ww{
+		@include size(1200px,36px);
+		text-align: center;
+		line-height: 36px;
+		//height: 36px;
+		margin: 20px auto;
+		//width: 1200px;
+		margin: 0 auto;
+		clear: both;
+		position: relative;
+		
+		a{
+			color: #333;
+			float: left;
+			margin: 0 auto;
+			img{
+				vertical-align: bottom;
+				padding: 0 20px;
+				
+			}
+			.one{
+				padding-left: 300px;
+			}
+			
+		}
 	}
 }
 .copyRight{

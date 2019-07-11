@@ -1,0 +1,516 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+a, u {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+i, em {
+  font-style: normal;
+}
+
+a {
+  color: #777777;
+}
+
+a:hover {
+  color: red;
+}
+
+span:hover {
+  color: red;
+}
+
+#header_top {
+  width: 100%;
+  height: 36px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+#header_top .header_top_box {
+  line-height: 36px;
+  margin: 0 auto;
+  width: 1180px;
+  height: 36px;
+  background-color: #f2f2f2;
+}
+
+#header_top .header_top_box .header_top_left {
+  float: left;
+  width: 210px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+}
+
+#header_top .header_top_box .header_top_left li {
+  float: left;
+  margin-left: 10px;
+}
+
+#header_top .header_top_box .header_top_right {
+  float: right;
+  width: 285px;
+  height: 28px;
+}
+
+#header_top .header_top_box .header_top_right li {
+  float: left;
+  display: inline;
+  height: 28px;
+  font-size: 12px;
+  color: #6c6c6c;
+}
+
+.header_center {
+  height: 155px;
+  border-bottom: 3px solid #fc4c65;
+  position: relative;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.header_center .w {
+  width: 1200px;
+  margin: 0 auto;
+  clear: both;
+  position: relative;
+}
+
+.header_center .w .logo {
+  float: left;
+  margin-top: 32px;
+  height: 125px;
+  line-height: 125px;
+  margin-right: 70px;
+}
+
+.header_center .w .freeCarry {
+  float: left;
+  margin-top: 50px;
+  margin-right: 56px;
+}
+
+/* 表单 */
+.regist {
+  width: 982px;
+  height: 594px;
+  border: 1px solid black;
+  margin: 40px auto 20px auto;
+}
+
+.regist .regist_title_xu {
+  height: 37px;
+  border-bottom: 1px solid #666666;
+  background: #e6e6e6;
+  padding-left: 15px;
+}
+
+.regist .regist_title_xu h1 {
+  line-height: 37px;
+  font-size: 16px;
+  color: #444444;
+  font-weight: bold;
+}
+
+.regist .regist_title_xu .content_right {
+  width: 187px;
+  height: 37px;
+  float: right;
+  border: 1px solid black;
+}
+
+.regist .regist_title_xu .content_right p {
+  text-align: center;
+  line-height: 37px;
+}
+
+.regist .registActBg {
+  float: left;
+  padding: 40px 40px 25px;
+  width: 910px;
+}
+
+.regist .registActBg .tag {
+  display: block;
+  overflow: hidden;
+  height: 28px;
+  width: 910px;
+  line-height: 45px;
+  border-bottom: 1px solid #000;
+}
+
+.regist .registActBg .tag ul {
+  float: left;
+}
+
+.regist .registActBg .tag ul li {
+  height: 28px;
+  width: 116px;
+  float: left;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  line-height: 22px;
+}
+
+.regist .registActBg .infor {
+  display: block;
+  overflow: hidden;
+}
+
+.regist .registActBg .infor h2 {
+  width: 140px;
+  height: 45px;
+  float: left;
+  background: url(../images/num_2.gif) 10px 0 no-repeat;
+  color: #999999;
+  text-indent: -9999px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  margin-top: 13px;
+}
+
+.regist .registActBg .infor .email {
+  width: 535px;
+  float: left;
+  height: 460px;
+}
+
+.regist .registActBg .infor .email .bt {
+  color: #656565;
+  padding-left: 145px;
+  padding-top: 50px;
+  float: left;
+}
+
+.regist .registActBg .infor .email .bt p {
+  padding-bottom: 10px;
+}
+
+.regist .registActBg .infor .email .bt .submitStyle {
+  float: left;
+  width: 127px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background-color: #fc4c65;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  clear: both;
+  margin-left: 100px;
+}
+
+.regist .registActBg .infor .email .gray {
+  padding: 20px 0px 0px 150px;
+  height: 26px;
+  line-height: 26px;
+  width: 635px;
+  color: #666666;
+}
+
+.regist .registActBg .infor .email .gray .label_email {
+  text-align: left;
+  height: 26px;
+  line-height: 26px;
+  float: left;
+}
+
+.regist .registActBg .infor .email .gray .label_email .spanAlert {
+  color: #ff1200;
+  padding-right: 4px;
+}
+
+.regist .registActBg .infor .email .gray input {
+  height: 24px;
+  line-height: 24px;
+  margin-top: 0px;
+  border: 1px solid #ccc;
+  padding: 0 3px 0 3px;
+  width: 200px;
+  float: left;
+  margin-right: 5px;
+}
+
+.regist .registActBg .infor .email .gray a .label_email {
+  text-align: left;
+  height: 26px;
+  line-height: 26px;
+  float: left;
+  width: 110px;
+}
+
+.regist .registActBg .infor .email .gray img {
+  padding-right: 5px;
+  float: left;
+  margin-left: -35px;
+}
+
+.regist .registActBg .infor .email .gray table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: 12px/18px Arial,Simsun,Helvetica,sans-serif;
+  float: left;
+}
+
+.regist .registActBg .infor .email .gray table tbody {
+  margin: 0 auto;
+}
+
+.regist .registActBg .infor .email .gray table tbody tr {
+  margin: 0 auto;
+}
+
+.regist .registActBg .infor .email .gray table tbody tr td {
+  vertical-align: top;
+}
+
+.regist .registActBg .infor .email .gray table tbody tr td input {
+  height: 24px;
+  line-height: 24px;
+  margin-top: 0px;
+  border: 1px solid #ccc;
+  padding: 0 3px 0 3px;
+  float: left;
+}
+
+.regist .registActBg .infor .email .gray table tbody tr td span img {
+  vertical-align: bottom;
+}
+
+.regist .registActBg .infor .email .gray table tbody tr td .changeCode a {
+  color: #666;
+}
+
+/* 底部 */
+.bottom_synopsis {
+  padding: 25px 0px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.bottom_synopsis .footer_add {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 42px;
+  height: 70px;
+}
+
+.bottom_synopsis .footer_add .footer_img_right {
+  margin-right: 116px;
+}
+
+.bottom_synopsis .footer_add .footer_img_right .index_icon {
+  width: 65px;
+  height: 65px;
+  margin-top: 2px;
+  background-image: url(../img/43.png);
+  background-repeat: no-repeat;
+}
+
+.bottom_synopsis .footer_add .footer_img_right .crl {
+  clear: both;
+  display: block;
+  height: 0px;
+}
+
+.bottom_synopsis .footer_add .bottom_synopsis_icon_02 {
+  background-position: -98px -65px;
+}
+
+.bottom_synopsis .footer_add .bottom_synopsis_icon_03 {
+  background-position: -98px -130px;
+}
+
+.bottom_synopsis .footer_add .bottom_synopsis_icon_04 {
+  background-position: -98px -195px;
+}
+
+.bottom_synopsis .footer_add .fl {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+}
+
+.bottom_synopsis .footer_add .fl h3 {
+  font-size: 16px;
+  color: #595757;
+  height: 30px;
+  line-height: 30px;
+}
+
+.bottom_synopsis .footer_add .fl p {
+  font-size: 12px;
+  color: #595757;
+  height: 20px;
+  line-height: 20px;
+}
+
+.helpLink {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.helpLink .w {
+  width: 1200px;
+  margin: 0 auto;
+  clear: both;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.helpLink .w .FSIntro {
+  width: 418px;
+  float: left;
+  margin-right: 50px;
+}
+
+.helpLink .w .FSIntro a:link {
+  color: #777777;
+  text-decoration: none !important;
+}
+
+.helpLink .w .FSIntro a:link img {
+  float: left;
+  margin-right: 10px;
+  height: 122px;
+}
+
+.helpLink .w .FSIntro h4 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fd3502;
+  height: 30px;
+  line-height: 30px;
+}
+
+.helpLink .w .FSIntro p {
+  line-height: 24px;
+  font-family: 'Microsoft YaHei';
+  font-size: 13px;
+  display: inline;
+}
+
+.helpLink .w dl {
+  float: left;
+  margin-right: 4px;
+}
+
+.helpLink .w dl dt {
+  font-size: 16px;
+  font-family: "黑体";
+  line-height: 30px;
+  width: 118px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #595757;
+}
+
+.helpLink .w dl dt dd {
+  line-height: 24px;
+  width: 118px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #595757;
+}
+
+.siteLink {
+  background-color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.siteLink .w {
+  width: 1200px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin: 20px auto;
+  margin: 0 auto;
+  clear: both;
+  position: relative;
+}
+
+.siteLink .w a {
+  color: #333;
+  margin: 0 auto;
+}
+
+.siteLink .w a img {
+  vertical-align: bottom;
+}
+
+.siteLink .ww {
+  width: 1200px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin: 20px auto;
+  margin: 0 auto;
+  clear: both;
+  position: relative;
+}
+
+.siteLink .ww a {
+  color: #333;
+  float: left;
+  margin: 0 auto;
+}
+
+.siteLink .ww a img {
+  vertical-align: bottom;
+  padding: 0 20px;
+}
+
+.siteLink .ww a .one {
+  padding-left: 300px;
+}
+
+.copyRight {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  background-color: #f12e24;
+  color: #fff;
+}
+
+.y_span {
+  color: #9C9A9A;
+}
+
+.r_span {
+  color: red;
+}
+
+.g_span {
+  color: green;
+}

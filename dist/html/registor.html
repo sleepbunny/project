@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/registor.min.css">
+	</head>
+	<body>
+		<div id="header_top">
+			<div class="header_top_box">
+				<ul class="header_top_left">
+						<li>欢迎来到风尚购物</li>
+							<li><a href="http://127.0.0.1:8848/project/dist/html/login.html" style="cursor: pointer;">登录</a></li>
+							<li><s class="line"></s></li>
+							<li><a href="http://127.0.0.1:8848/project/dist/html/registor.html">注册</a></li>	
+				</ul>
+				<ul class="header_top_right">
+				   
+					<li class="hasSubMenu">
+						<a href="http://127.0.0.1:8848/project/dist/html/index.html">我的风尚<i class="toDown">&nbsp;</i></a><s  style="padding:0px 0px 0px 10px;">|</s>
+					</li>
+					<li style="padding-left:12px;">4001-677-077<s style="padding:0px 10px 0px 10px;">|</s></li>
+					<li class="hasSubMenu">
+						<a href="#" target="_blank">客服中心<i class="toDown">&nbsp;</i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header_center">
+			<div class="w">
+				<h1 class="logo">
+					<a href="http://127.0.0.1:8848/project/dist/html/index.html" id="home" title="风尚">
+						<img src="../img/40.png"></a>
+				</h1>
+				<div class="freeCarry">
+						<img src="../img/39.jpg">
+				</div>	
+			</div>
+		</div>
+		<!-- 表单 -->
+		<div class="regist">
+			<div class="regist_title_xu">
+				<h1 style="float: left;">注册新用户</h1>
+				<!-- content_left-->
+				<div class="content_right">
+					<p>我已经注册，现在就<a href="http://127.0.0.1:8848/project/dist/html/login.html " style="color: red;">登录</a></p>
+				</div>
+            <!--content_right-->
+        </div>
+        <div class="content_left registActBg relative">
+            <div class="tag clearfix">                
+                <ul>
+                    <li class="zhuce"><a href="ConsumerRegPhone.aspx">
+                        <img src="https://www.fstvgo.com/images//reg/phone.gif" /></a></li>                    
+                </ul>
+            </div>
+            <div class="infor clearfix">
+                <h2>填写您的信息:</h2>
+                <div class="email">
+					<div id="leixing" style="padding-top: 30px;">
+                        <table border="0" cellspacing="0" cellpadding="0" style="display: none;">
+                            <tr>
+                                <td rowspan="2">
+                                    <label for="Email">
+                                        您的用户类型：</label>
+                                </td>
+                                <td valign="middle">
+                                    <span class="input"><input id="MainPlace_rbCustomerType2" type="radio" name="" value="" checked="checked" " /><label for="MainPlace_rbCustomerType2">个人用户</label></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="middle">
+                                    <span class="input"><input id="MainPlace_rbCustomerType1" type="radio" name="" value="" onclick="CompanyClick();" /><label for="MainPlace_rbCustomerType1">企业用户</label></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+					<div class="gray">
+                        <label class="label_email"><span class="spanAlert">*</span>手机号码：</label>
+                        <input name="" type="text" maxlength="11" id= "phone" onblur="checkphone()"/>
+                        <img src="https://www.fstvgo.com/images//common/xbTure20.gif" style="display: none;" />
+                        <span class="sperror y_span" id="y_phone"></span>
+                    </div>
+                    <div class="clearm"></div>
+                    <!--end of email-->
+                    <div class="gray">
+                        <label class="label_email"><span class="spanAlert">*</span>验证码：</label>
+						<table cellpadding="0" cellspacing="0" border="0" style="float:left;">
+							<tr>
+								<td style="vertical-align:top;"><div class="inputbg2"><input name="ctl00$MainPlace$VerifyControl1$ctl00$txt_Code" type="text" maxlength="4" id="MainPlace_VerifyControl1_ctl00_txt_Code" style="width:80px;" /></div></td>
+								
+								<td style="vertical-align:middle; padding-left:3px;"><span>
+								<img id="MainPlace_VerifyControl1_ctl00_img_Code" onclick="ChangeVerifyImage(&#39;MainPlace_VerifyControl1_ctl00_img_Code&#39;,&#39;681689519&#39;,&#39;4&#39;);" src="../img/55.jpg" style="height:24px;width:60px;" /></span></td>
+								<td style="padding-left:3px;vertical-align:middle;"><span class="changeCode"><a id="loginChangeImage" href="javascript:ChangeVerifyImage('MainPlace_VerifyControl1_ctl00_img_Code','681689519','4');">看不清，换一张</a></span></td>
+							</tr>
+						</table>
+						<div class="clear"></div>
+                    </div>
+                    <div class="clearm"></div>
+                    <div class="gray1">
+                        <label class="label_email"></label>
+                        <span class="sperror" id="VerifyControlError"></span>
+                    </div>
+                    <div class="clearm"></div>
+                    <div class="gray">
+                        <a href="#" id="SendCode">
+                            <label class="label_email"></label>
+                            <img src="https://www.fstvgo.com/images/reg/messagecode.gif" style="padding-right: 5px; float: left; display: ; margin-left: -35px;" />
+						</a>
+                    </div>
+                    <div id="showSendCode" class="graycode" style="display: none;">
+                        <label class="label_email"></label>
+                        <span>验证码已发送您的手机上，请查收<span id="cd_timer"></span>秒后可重新发送</span>
+                    </div>
+					<div class="gray">
+                        <label class="label_email">
+                            <span class="spanAlert">*</span>手机验证码：
+                        </label>
+                        <input name="ctl00$MainPlace$txtMobileCode" type="text" maxlength="6" id="MainPlace_txtMobileCode" />
+                        <img src="https://www.fstvgo.com/images//common/xbTure20.gif" style="display: none;" id="imgMobileCode" />
+                        <span class="sperror" id="span_CheckMobileCode"></span>
+                        <input type="hidden" id="hidMobileCode" value="N" />
+                    </div>
+					<div class="gray">
+                        <label class="label_email">
+                            <span class="spanAlert">*</span>设定登录密码：
+						</label>
+                        <input name="ctl00$MainPlace$txt_PassWordR" type="password" maxlength="16" id="password" onblur="checkpassword()"/>
+                       
+                        <span class="sperror y_span" id="q_password"></span>
+                    </div>
+					<div class="gray">
+                        <label class="label_email">
+                            <span class="spanAlert">*</span>再次输入密码：
+						</label>
+                        <input name="ctl00$MainPlace$txt_ConfirmPassword" type="password" maxlength="16" id="q_password" onblur="yzpassword()" />
+                        <img src="src/img/55.jpg" style="display: none;" />
+                        <span class="sperror  y_span" id="y_q_password"></span>
+                    </div>
+					<div class="bt">
+                        <p></p>                        
+                        <div id="submitRegister" class="submitStyle" onclick="zhuce()">
+                            &nbsp;注&nbsp;册&nbsp;
+                        </div> 
+                    </div>
+                    <div class="clear"></div>
+                </div>
+			</div>
+			<div class="reg_issue" style="display: none;">
+                <a href="http://127.0.0.1:8848/project/dist/html/login.html" target="_blank"></a>
+            </div>
+		</div>
+		</div>
+
+	<!-- 底部 -->
+			<div class="bottom_synopsis" id="footer_add_nav" style="width:1300px;">
+				<div class="footer_add">
+				<div class="footer_img_right fl phone_synopsis_box">
+							<div class="fl index_icon bottom_synopsis_icon_02">&nbsp;</div>				
+							<div class="fl phone_synopsis">
+								<h3><a href="#" target="_blank">手机注册 一步搞定</a></h3>				
+								<p>输入手机号-输入验证码-获取手机</p>
+								<p>验证码-设定密码-完成注册</p>
+							</div>				
+							<div class="crl">&nbsp;</div>
+						</div>				
+						<div class="footer_img_right fl tel_synopsis_box">
+							<div class="fl index_icon bottom_synopsis_icon_03">&nbsp;</div>				
+							<div class="fl tel_synopsis">
+								<h3><a href="#" target="_blank">型录/电商/新媒体视频招商加盟</a></h3>				
+								<p>柳小姐：0791-88110022-8126</p>
+							</div>				
+							<div class="crl">&nbsp;</div>
+						</div>				
+						<div class="footer_img_right fl qq_synopsis_box">
+							<!-- <div class="#">&nbsp;</div> -->
+							<div class="fl index_icon bottom_synopsis_icon_04">&nbsp;</div>
+								<div class="fl qq_synopsis">
+								<h3><a href="#" target="_blank">在线客服</a></h3>				
+								<p>24小时客服热线:</p>
+								<p>4001-677-077</p>
+						</div>				
+							<div class="crl">&nbsp;</div>
+						</div>				
+						<div class="crl">&nbsp;</div>
+					</div>
+				</div>
+				<div class="helpLink wp">
+	<div class="w clearfix">
+	<div class="FSIntro"><a href="#"><img alt="#" src="http://www.fstvgo.com/images/fengshangimg/FSBreif.jpg" /></a>
+	<h4><a href="#" target="_blank">关于风尚购物</a></h4>	
+	<p>江西风尚电视购物股份有限公司于2009年9月28日正式成立，公司致力于现代家庭电视购物，是传媒和零售的完美组合。江西电视台风尚购物频道是经国家广电总局批准的全国性的、同时也是江西第一家真正的专业家庭电视购物频道。</p>
+	</div>	
+	<dl>
+		<dt>帮助中心</dt>
+		<dd><a href="#" target="_blank">购物流程</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">积分规则</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">积分绑定</a></dd>
+		<dd><a href="#" target="_blank">使用订单状态说明</a></dd>
+	</dl>	
+	<dl>
+		<dt>配送方式</dt>
+		<dd><a href="#" target="_blank">免费配送地区</a></dd>
+		<dd><a href="#" target="_blank">配送范围</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">收费标准</a></dd>
+	</dl>	
+	<dl>
+		<dt>支付方式</dt>
+		<dd><a href="#" target="_blank">货到付款</a></dd>
+		<dd><a href="#" target="_blank">银联支付</a></dd>
+		<dd><a href="#" target="_blank">支付宝</a></dd>
+		<dd><a href="#" target="_blank">微信支付</a></dd>
+	</dl>	
+	<dl>
+		<dt>客户服务</dt>
+		<dd><a href="#" target="_blank">售后及退换货</a></dd>
+		<dd><a href="#" target="_blank">在线客服</a></dd>
+	</dl>	
+	<dl>
+		<dt>会员中心</dt>
+		<dd><a href="#" target="_blank">资料修改</a></dd>
+		<dd><a href="#" target="_blank">找回密码</a></dd>
+		<dd><a href="#" target="_blank">会员等级</a></dd>
+		<dd><a href="#" target="_blank">会员权益 </a></dd>
+	</dl>	
+	<dl>
+		<dt>招商专区</dt>
+		<dd><a href="#" target="_blank">关于我们</a></dd>
+		<dd><a href="#" target="_blank">合作流程</a></dd>
+		<dd><a href="#" target="_blank">联系我们</a></dd>
+		<dd><a href="#" target="_blank">供应商系统</a></dd>
+	</dl>
+	</div>
+	</div>	
+	<div class="wp siteLink">	
+		<p class="w"><a href="#" target="_blank">ICP经营许可证：赣ICP备15000001号</a></p>	
+		<p class="w ww"><a><img class="one" src="http://www.fstvgo.com/images/FS/unionpay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/alipay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/weChatPay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/ICPNum.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/TrustSite.jpg" /></a></p>
+	</div>	
+	<div class="wp copyRight">
+		<p class="w"></p>
+	</div>
+	
+<script>
+
+// 正则表达式注册验证
+			window.onload = function onld() {
+				window.status = "正在注册...";
+			}
+
+
+				var password;
+
+			function checkpassword() {
+				  password = document.getElementById("password").value;
+				 cn = document.getElementById('y_password');
+				var reg = /^.{4,10}$/; //密码长度可以为非换行符的任意字符，长度必须在4-10位以内;
+				if (reg.test(password) == false) {
+					y_password.innerHTML = "密码长度必须为4-10位以内";
+					cn.className = 'r_span';
+					return false;
+				} else {
+					y_password.innerHTML = 
+					cn.className = 'g_span';
+					return true;
+				}
+
+			}
+			var yzpwd;
+
+			function yzpassword() {
+				yzpwd = document.getElementById("q_password").value;
+				 cn = document.getElementById('y_q_password');
+				if (yzpwd != "") {
+					if (yzpwd == password) {
+						y_q_password.innerHTML = "*";
+						cn.className = 'g_span';
+						return true;
+					} else {
+						y_q_password.innerHTML = "两次输入密码不一致，请重新输入";
+						cn.className = 'r_span';
+						return false;
+					}
+				} else {
+					y_q_password.innerHTML = "必填";
+					cn.className = 'r_span';
+				}
+
+			}
+			var phone;
+
+			function checkphone() {
+				 phone = document.getElementById("phone").value;
+				 cn = document.getElementById('y_phone');
+				var reg = /^1\d{10}$/;
+				if (reg.test(phone) == false) {
+					y_phone.innerHTML = "请输入正确的手机号";
+					cn.className = 'r_span';
+					return false;
+				} else {
+					y_phone.innerHTML = "*";
+					cn.className = 'g_span';
+					return true;
+				}
+			}
+			//注册验证
+			function zhuce() {
+				if (checkphone()&& checkpassword() && yzpassword()) {
+					alert(username + "：注册成功！");
+					var s = document.getElementsByTagName("input").length;
+					//提交后，清除文本框，提示框内容，并取消单选框选择
+					for (var i = 0; i < s; i++) {
+						document.getElementsByTagName("input")[i].value = "";
+						document.getElementsByTagName("span")[i].innerHTML = "";
+						document.getElementsByTagName("input")[i].checked = false;;
+					}
+
+				} else {
+					alert("对不起，注册失败！");
+				}
+			}
+</script>
+	</body>
+</html>

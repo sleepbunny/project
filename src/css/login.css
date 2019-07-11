@@ -1,0 +1,36 @@
+/*
+Error: Invalid CSS after "	 }": expected selector or at-rule, was "}"
+        on line 340 of D:\HBuilderProjects\HelloHBuilder\project\src\sass\login.scss
+
+335: 			
+336: 			}
+337: 			}
+338: 		 }
+339: 	 }
+340: }
+341: .helpLink {
+342: 	width: 100%;
+343:     background-color: #fff;
+344:     padding-top: 20px;
+345:     font-size: 14px;
+
+Backtrace:
+D:\HBuilderProjects\HelloHBuilder\project\src\sass\login.scss:340
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:42:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	 }\": expected selector or at-rule, was \"}\"\A         on line 340 of D:\HBuilderProjects\HelloHBuilder\project\src\sass\login.scss\A \A 335: 			\A 336: 			}\A 337: 			}\A 338: 		 }\A 339: 	 }\A 340: }\A 341: .helpLink {\A 342: 	width: 100%;\A 343:     background-color: #fff;\A 344:     padding-top: 20px;\A 345:     font-size: 14px;"; }

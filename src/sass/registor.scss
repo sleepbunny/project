@@ -68,7 +68,8 @@
 /* 表单 */
 .regist	{ 
 	width:982px;
-	border:1px solid #666666;
+	height: 594px;
+	 border:1px solid black;
 	margin:40px auto 20px auto;
 	.regist_title_xu { 
 		height:37px;
@@ -85,6 +86,7 @@
 			width: 187px;
 			height: 37px;
 			float: right;
+			border: 1px solid black;
 			p{
 				text-align: center;
 				line-height: 37px;
@@ -117,14 +119,27 @@
 		.infor{
 			display: block;
 			overflow: hidden;
+			h2{
+				width: 140px;
+				height: 45px;
+				float: left;
+				background: url(../images/num_2.gif) 10px 0 no-repeat;
+				color: #999999;
+				text-indent: -9999px;
+				font-size: 14px;
+				font-weight: normal;
+				line-height: 26px;
+				margin-top: 13px;
+			}
 			.email {
 				width: 535px;
 				float: left;
 				height: 460px;
+				//padding-left: 140px;
 				.bt {
 					color: #656565;
-					padding-left: 24px;
-					padding-top: 10px;
+					padding-left: 145px;
+					padding-top: 50px;
 					float: left;
 					p {
 						padding-bottom: 10px;
@@ -145,7 +160,7 @@
 					}
 				}
 				.gray {
-					padding: 20px 0px 0px 24px;
+					padding: 20px 0px 0px 150px;
 					height: 26px;
 					line-height: 26px;
 					width: 635px;
@@ -176,18 +191,20 @@
 						height: 26px;
 						line-height: 26px;
 						float: left;
+						width: 110px;
 					}
-					a img{
+					img{
 						padding-right: 5px;
 						float: left;
 						
-						margin-left: -4px;
+						margin-left: -35px;
 					}
 					table {
 						border-collapse: collapse;
 						border-spacing: 0;
 						font: 12px/18px Arial,Simsun,Helvetica,sans-serif;
 						float: left;
+						
 						tbody{
 							margin: 0 auto;
 							tr{
@@ -218,148 +235,60 @@
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
 /* 底部 */
 .bottom_synopsis {
-    /* background: #efefef; */
+   
     padding: 25px 0px;
     width: 100%;
-    margin-top: 50px; 
-	.footer_add {
-	     width: 1200px;
-	     margin: 0 auto;
-	     padding-left: 42px;
-		 .phone_synopsis_box{
-		 	margin-right: 85px;
-		 	display: inline;
-			 .index_icon {
-				@include size(65px,65px);
-			    //width: 65px;
-			    //height: 65px;
-			    margin-top: 2px;
-			    background-image: url(../img/index_icon.png);
-			    background-repeat: no-repeat;
-				.phone_synopsis{
-					float: left;
-					h3 {
-					    font-size: 16px;
-					    color: #595757;
-					    height: 30px;
-					    line-height: 30px;
-						a {
-						    font-size: 17px;
-						    color: #595757;
-						    height: 30px;
-						    line-height: 30px;
-						    text-decoration: none;
-						    font-weight: 700;
-						    font-family: "黑体";
-						}
-						
-					}
-					p {
-					    font-size: 12px;
-					    color: #595757;
-					    height: 20px;
-					    line-height: 20px;
-					}
-				}
-			} 
-		 }
-		 .tell_synopsis_box{
-		 	
-		 	display: inline;
-			float: left;
+    margin-top: 50px;
+		.footer_add {
+		width: 1200px;
+		margin: 0 auto;
+		padding-left: 42px;
+		height: 70px;
+			.footer_img_right {
 			margin-right: 116px;
-			.bottom_synopsis_icon_03{
-				margin-left: 20px;
-				display: inline;
-				float: left;
-				@include size(65px,65px);
-				//width: 65px;
-				//height: 65px;
-				margin-top: 2px;
+			 .index_icon {
+					width: 65px;
+					height: 65px;
+					margin-top: 2px;
+					background-image: url(../img/43.png);
+					background-repeat: no-repeat;
+				}
+			.crl {
+				clear: both;
+				display: block;
+				height: 0px;
+			}
+		}
+			.bottom_synopsis_icon_02 {
+				background-position: -98px -65px;
+			}
+			.bottom_synopsis_icon_03 {
 				background-position: -98px -130px;
-				background-repeat: no-repeat;
 			}
-			.tel_synopsis{
-				margin-left: 20px;
-				float: left;
-				display: inline;
-				h3 {
-					font-size: 16px;
-					color: #595757;
-					height: 30px;
-					line-height: 30px;
-					a {
-					font-size: 17px;
-					color: #595757;
-					height: 30px;
-					line-height: 30px;
-					text-decoration: none;
-					font-weight: 700;
-					font-family: "黑体";
+			.bottom_synopsis_icon_04 {
+				background-position: -98px -195px;
+			}
 					
-				}
-				}
-				p{
-					font-size: 12px;
-					color: #595757;
-					height: 20px;
-					line-height: 20px;
-				}
-			}
-		 }
-		 .qq_synopsis_box{
-		 	margin-right: 85px;
-		 	display: inline;
+		.fl {
 			float: left;
-			.bottom_synopsis_icon_04{
-				float: left;
-				@include size(65px,65px);
-				//width: 65px;
-				//height: 65px;
-				margin-top: 2px;
-				background-image: url(../Images/FS/index_icon.png);
-				background-repeat: no-repeat;
+			display: inline;
+			margin-left: 10px;
+			h3{
+				font-size: 16px;
+				color: #595757;
+				height: 30px;
+				line-height: 30px;
 			}
-			.qq_synopsis{
-				float: left;
-				h3{
-					font-size: 16px;
-					color: #595757;
-					height: 30px;
-					line-height: 30px;
-					 a {
-						font-size: 17px;
-						color: #595757;
-						height: 30px;
-						line-height: 30px;
-						text-decoration: none;
-						font-weight: 700;
-						font-family: "黑体";
-						}
-					}
-				p{
-						font-size: 12px;
-						color: #595757;
-						height: 20px;
-						line-height: 20px;
-				}
-			
+			 p{
+				font-size: 12px;
+				color: #595757;
+				height: 20px;
+				line-height: 20px;
 			}
-			}
-		 }
-	 }
+		}
+	}
 }
 .helpLink {
 	width: 100%;
@@ -377,7 +306,16 @@
 			width: 418px;
 			float: left;
 			margin-right: 50px;
-			h4 {
+			a:link{
+				color: #777777;
+				text-decoration: none !important;
+				 img {
+					float: left;
+					margin-right: 10px;
+					height: 122px;
+				}
+			}
+			h4{
 				font-size: 15px;
 				font-weight: bold;
 				color: #fd3502;
@@ -388,6 +326,7 @@
 				line-height: 24px;
 				font-family: 'Microsoft YaHei';
 				font-size: 13px;
+				display: inline;
 			}
 		}
 		dl {
@@ -402,12 +341,14 @@
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				font-weight: 700;
+				color: #595757;
 				dd {
 					line-height: 24px;
 					width: 118px;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
+					color: #595757;
 				}
 			}
 		}
@@ -428,6 +369,42 @@
 		margin: 0 auto;
 		clear: both;
 		position: relative;
+		
+		a{
+			color: #333;
+			// float: left;
+			margin: 0 auto;
+			img{
+				vertical-align: bottom;
+				
+			}
+		}
+	}
+	.ww{
+		@include size(1200px,36px);
+		text-align: center;
+		line-height: 36px;
+		//height: 36px;
+		margin: 20px auto;
+		//width: 1200px;
+		margin: 0 auto;
+		clear: both;
+		position: relative;
+		
+		a{
+			color: #333;
+			float: left;
+			margin: 0 auto;
+			img{
+				vertical-align: bottom;
+				padding: 0 20px;
+				
+			}
+			.one{
+				padding-left: 300px;
+			}
+			
+		}
 	}
 }
 .copyRight{
@@ -436,4 +413,13 @@
     line-height: 30px;
     background-color: #f12e24;
     color: #fff;
+}
+.y_span {
+	color:#9C9A9A;
+}
+.r_span {
+	color:red;
+}
+.g_span {
+	color:green;
 }

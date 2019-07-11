@@ -1,0 +1,565 @@
+
+<!DOCTYPE html >
+<html>
+<head>						
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/product-detail.min.css">
+</head>
+<body>
+<!--侧边栏-->
+<div class="siderFix siderFix_index">
+	<ul>
+    	<li><a href="#"><i class="memberShip"></i></a></li>
+        <li><a href="#"><i class="cartIcon"></i>购物车<span>0</span></a></li>
+        <li><a href="#"><i class="message"></i>我的消息<span> 0</span></a></li>
+        <li class="mobileline"><a href="#">
+        	<i class="mobile"></i>微信公众号
+            <div class="QRCode"><img src="../images/fengshangimg/QRCode.jpg"><i class="QRtoRight"></i></div>
+            </a>    
+        </li>
+    </ul>
+</div>
+<div id="header_top">
+        <div class="header_top_box">
+            <div class="header_top_left">
+                <ul>
+                    <li>欢迎来到风尚购物</li>
+                    <span id="spanNoLogin">
+                        <li><a href="http://127.0.0.1:8848/project/dist/html/login.html" style="cursor: pointer;">登录</a></li>
+                        <li><s class="line"></s></li>
+                        <li><a href="http://127.0.0.1:8848/project/dist/html/registor.html">注册</a></li>	
+                    </span>
+                    <span id="spanLogin">
+                        <li class="sn-login">您好，<span id="LoginConsumerName"></span>&nbsp;<a href="javascript:Logout();" title="注销退出">退出</a></li>
+                    </span>
+                </ul>
+            </div>
+            <ul class="header_top_right">
+               
+                <li class="hasSubMenu">
+                    <a href="http://127.0.0.1:8848/project/dist/html/index.html">我的风尚<i class="toDown">&nbsp;</i></a><s>|</s>
+                   
+                </li>
+                <li style ="padding-left:12px;">4001-677-077<s style ="padding-left:12px;">|</s></li>
+                <li class="hasSubMenu">
+                    <a href="#" target="_blank">客服中心<i class="toDown">&nbsp;</i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header_center wp">
+        <div class="w">
+            <h1 class="logo">
+                <a href="http://127.0.0.1:8848/project/dist/html/index.html" id="home" title="风尚">
+                    <img src="http://www.fstvgo.com/images/FS/FSLogo.png" alt="风尚" /></a>
+            </h1>
+          
+            <div class="searchCon" style="padding-left:200px;">
+                <div class="searchBar">
+                    <input type="text" value="请输入商品关键词或者货号" class="searchInput" name="search" id="searchKeyWord" />
+                    <input type="button" class="searchBtn" id="BtnSearch" value="搜索" />
+                    <input style="display: none" />                 
+                </div>
+                <div class="hotSearch">
+                      <div style='display:none'></div>
+                
+                <a href="#" target="_blank">鞋子</a>           
+                <a href="#" target="_blank">薇依床品</a>           
+                <a href="#" target="_blank">空气炸锅</a>           
+				<a href="#" target="_blank">零食</a>            
+                <a href="#" target="_blank">酒</a>           
+                <a href="#" target="_blank">羽绒服</a>           
+				<a href="#" target="_blank">牛肉</a>           
+			</div>
+            </div>
+            <div class="Cart">
+                <a href="#"><i class="cartIcon">&nbsp;</i>我的购物车<i>></i></a>
+            </div>
+        </div>
+        <div class="w navbar">
+            <div class="all_style category category" id="category" >
+                <a href="#">全部商品分类<i class="toDown">&nbsp;</i></a>
+                <div class="sort_list">
+                    <div style='display:none'></div>
+
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#" class="dszb" target="_blank">电视直播</a></li>
+                    <li><a href="#" target="_blank">热卖榜</a></li>
+                    <li><a href="#" target="_blank">风尚惠</a></li>
+                    <li><a href="#" target="_blank">品牌店中店</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!--nav--end-->
+    <!-- 头部导航菜单 -->
+    <input type="hidden" id="IsGift" value="0" />
+    <div class="bg_f5">
+        <div id="item-head">
+            <div class="mod_search_crumb" >
+                <div class="crumbSlide">
+                    <ul>
+                        <li class="crumb_list">
+                            <a href="#" style="text-decoration: none;font-size: 12px;color:#777777;" title="首页">首页</a>
+                        </li>                      
+                        <li style="display: ">&nbsp;&gt;&nbsp;</li>
+                        <li class="crumb_list crumb_list_s">
+                            <a style="text-decoration: none; font-size: 12px;color:#777777;" href="#" title="所有类别">所有类别<i class="iconSearch"></i></a>
+                        </li>
+                        <li style="display: ">&nbsp;&gt;&nbsp;</li>
+                        <li class="crumb_list crumb_list_s">
+                            <a style="text-decoration: none;font-size: 12px;color:#777777;" href="#" title="家居生活">家居生活<i class="iconSearch"></i></a>
+                        </li>
+                        <li style='display: '>&nbsp;&gt;&nbsp;</li>
+                        <li class="crumb_list crumb_list_s">
+                            <a style="text-decoration: none; font-size: 12px;color:#777777;" href="#" title="家居用品">家居用品<i class="iconSearch"></i></a>
+                        </li>                        
+                        <li>&nbsp;&gt;&nbsp;</li>
+                        <li class="crumb_list">
+                            <a style="text-decoration: none;font-size: 12px;color:#777777;" href="#" title="艾芙兰尼客餐厅家具大全套">艾芙兰尼客餐厅家具大全套</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 单品展示 -->
+            <div class="item-info clearfix" >
+                <!-- 左侧展示 -->                
+                <div class="item-pic" >
+                    <div class ="clearfix" style=" width:518px;height:398px;">
+                    <!-- 小图列表展示 -->
+                    <div id="catalog_p_show" class="pic-lists">
+                        <!-- 向上箭头 -->
+                        <div class="e_smallup">
+                            <a class="e_smallup">
+                                <img src="http://www.fstvgo.com/images/item/xbSmallup.gif" alt="" title="" /></a>
+                        </div>
+                        <ul class="pl-img">
+                                    <li class="smllimg">
+                                        <a href="http://img.fstvgo.com/Storage/ItemImages/100/201/207/317346/ViewBig/3173461.jpg">
+                                            <img style="height: 90px; width: 90px" src="http://img.fstvgo.com/Storage/ItemImages/100/201/207/317346/ViewSmall/3173461.jpg" alt="" />
+                                        </a>
+                                    </li>
+                        </ul>
+                        <!-- 向下箭头 -->
+                        <div class="e_smalldown">
+                            <a class="e_smalldown">
+                                <img src="http://www.fstvgo.com/images/item/xbSmalldown.gif" alt="" title="" /></a>
+                        </div>
+                    </div>
+ <!-- 小图列表展示end -->
+                    <!-- 大图展示 -->
+                    <!-- <div class="pic-zoom jqzoom" id="Jqzzom">
+                        <img style="width: 380px; height: 380px" src="http://img.fstvgo.com/Storage/ItemImages/100/201/207/317346/ViewBig/3173461.jpg" bigimgsrc="http://img.fstvgo.com/Storage/ItemImages/100/201/207/317346/ViewBig/3173461.jpg" id="img_MainLarge"
+                            alt="艾芙兰尼客餐厅家具大全套" />
+                    </div> -->
+					<div class="small_box pic-zoom jqzoom" id="Jqzzom">
+						<span class="mask"></span>
+						<span class="float_layer"></span>
+						<img src="http://img.fstvgo.com/Storage/ItemImages/100/201/207/317346/ViewBig/3173461.jpg" style="width: 380px; height: 380px">
+					</div>
+					<div class="big_box">
+						<img src="http://img.fstvgo.com/Storage/ItemImages/100/201/207/317346/ViewBig/3173461.jpg">
+					</div>
+                    </div>
+                    <div id="fenxiang" style="margin-left: 115px; width: 380px; height: 30px;">
+                        <dl style="float: left;">
+                            <dt>
+                                <!-- JiaThis Button BEGIN -->
+                                <div id="ckepop">
+                                    <span class="jiathis_txt" style="font-size: 12px;">分享到：</span> <a class="jiathis_button_tqq"></a><a class="jiathis_button_tsina"></a><a class="jiathis_button_renren"></a><a class="jiathis_button_kaixin001"></a>
+                                    <a href="#" class="jiathis jiathis_txt jtico jtico_jiathis"
+                                        target="_blank"></a><a class="jiathis_counter_style"></a>
+                                </div>
+                                <!-- JiaThis Button END -->
+                            </dt>
+                        </dl>
+                        <p style="float: right;">
+                            <a href="#" id="MainContent_ChooseProduct1_lbtnFavourite" onclick="favorite.show('317346');">
+                                <img src="http://www.fstvgo.com/images/fengshangimg/addFavorite.png" /></a>
+                        </p>
+                    </div>
+                    <!-- 大图展示end -->
+                </div>
+                <!-- 分享 --
+                <!-- 左侧展示end -->
+                <!-- 中间展示 -->
+                <div class="itembase-info">
+                    <div class="i-name ">
+                        <h2>
+                            艾芙兰尼客餐厅家具大全套
+                        </h2>
+<!--商品标签  begin-->
+                    </div>
+                    <span style="font-size: 12px;">商品货号： 317346</span>
+                    <div class="i_cuxiao_price">
+                    <div class="i-prices">
+                        <ul>                           
+                            <li id="itemSalePriceContainer" >
+                                <div><span style="width: 52px;">风尚价：</span><strong  style='color:#d91404;font-size:18px;font-weight:700;display:inline-block;'>&yen;9999.00</strong> </div>
+                            </li>
+                    <div class="i-choose i-promotion cuxiao">
+                       <!-- <span>展开促销<i></i></span> -->
+                         <p style="font-size: 12px;">促销信息：</p> 
+                           
+                        <div>
+                        <span style="font-size: 14px;">买赠</span><dl><dd style="font-size: 12px;">乳胶枕一对
+</dd>
+                             </dl></div>
+                                                                      
+                         </div>
+                    
+                        </ul>
+
+                    </div>
+                        </div>
+     
+<ul class="fl">
+    <li id="summary-stock-list" style="padding-top: 5px">
+        <div class="dt"style="font-size: 12px;">送至：</div>
+        <div class="dd" style="width: auto;float:left;">
+            <div class="" id="store-selector">
+                <div class="text">
+                    <div title="江西省 南昌市 东湖区" id="deliverregion" style="font-size: 12px;color: #777777;">江西省 南昌市 东湖区</div>
+                    <b></b>
+          <span class="clr"></span>
+                </div>
+                <div id="closeDeliverregionContent" class="close"></div>
+            </div>
+            <!--store-selector end-->
+            <div id="store-prompt" style="float: left;">
+            </div>
+            <!--store-prompt end--->
+        </div>
+        <span class="clr"></span>
+    </li>
+</ul>
+                    <div class="canshu">
+                        <div class="i-choose-qty">
+                            <a style="text-decoration: none;" href="#" title="减少" onclick="#">-</a>
+                            <input class="num" id="txtQty_317346" type="text" value="1" onchange="#"
+                                maxlength="4" />
+                            <a style="text-decoration: none;" href="#" title="增加" onclick="#">+</a>&nbsp;&nbsp;
+ </div>
+                        <div class="" style="padding-bottom: 10px; color: #e2051b;">
+                        </div>
+
+                        <div class="i-choose-stock" id="lbl_stock_content" style="display: ">
+                            <input type="hidden" value="0" id="lbl_CurrentQty_317346" />
+                            <h3 style="font-size: 12px; color: #333333; padding-left: 15px;">库存状况:有库存<span style="padding-left: 8px;" id="lbl_ItemQty_317346">
+                                
+                            </span>
+                            </h3>
+                        </div>
+                        <input type="hidden" value="" id="lbl_InStockDate_317346" />
+                        <!--加入购物车-->
+                        <div class="i-btn">
+                            <a style='text-decoration: none;background-color: green;' href="#" id="btnDirectBuy" class="add-cart addLike" title="立即购买">立即购买</a>
+                            <a style='text-decoration: none;' href="#" id="btnAddToBasket" class="add-cart addShop" title="加入购物车">加入购物车</a>
+        <a style="text-decoration: none; display: none" href="javascript:void(0)" onclick="#" id="itemOutOfStorage">
+                                <img src="http://www.fstvgo.com/images//item/Btnnostock.gif" alt="到货通知" />
+                            </a>
+                            <img src="http://www.fstvgo.com/images//item/BtnSaleout.gif" alt="已售罄" id="imgItemDetailNotSale"
+                                style="display: none" />
+                        </div>
+                        <div class="fr tip mt10" id="DivCannotBuyMessage" style="display: none; font-size: 12px; color: Red; font-weight: normal; margin-top: 0px; position: Relative; top: -36px; left: -80px;">
+                        </div>
+                        <div class="clear:both">
+                        </div>
+                        <!--加入购物车结束-->
+                        <!-- 加入购物车按钮 end-->
+                    </div>
+                </div>
+                <!-- 中间展示end -->
+                <!-- 右侧展示 -->
+                <div class="shop-info">
+                    <!-- 右侧展示供应商 -->
+                    <div class="supplier" style="display: none">
+                <div class="s-logo" style="">
+                    <a style="text-decoration: none;" href="#">
+                        <img alt="" style="width:200px;" src="../img/51.jpg" /></a>                   
+                </div>
+                </div>
+                    <!-- 右侧展示供应商end -->
+                    <div class="shopbase-info qrcodebuy">
+                        <h3>
+                            <p style="font-size: 12px;;">手机扫码订购</p> 
+                          
+                            <div  frameborder="0" scrolling="no" style="width:188px;height:188px;"><img src="../img/51.jpg" style="width:188px;height:188px;/></div>          
+                            <span>银联支付/支付宝/微信支付
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="s-service">
+                        
+                        <a href="http://www.fstvgo.com/Goods/TV.aspx">
+                            <div class="tvhistory"style="font-size: 12px;color:#777;text-align:center;margin-top:10px;">查看往期电视商品</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="s-service">    
+                </div>    
+            </div>
+            <!-- 右侧展示end -->
+        </div>
+    </div>
+
+    <div class="CX-box" style='display:none'>
+        <div class="CX-nav">
+            <ul class="ct-nav">
+                <li class="CX-hot-nav"><a style="text-decoration: none;" href="#"><span>关联商品</span></a></li>
+            </ul>
+        </div>
+        <div class="CX-items" style="border-top: 2px solid #f8784b;">
+            <ul>
+                
+            </ul>
+        </div>
+        </div>
+
+		<div class="rightBox" style="width:100%;height:200px;">
+			<div class="tableBox" style="width:100%;height:200px;">
+				<table cellspacing="0" cellpadding="0" border="0">
+					<thead>
+						<tr>
+							<th>名称</th>
+							<th>单价</th>
+							<th>数量</th>
+							<th>价格</th>
+						</tr>
+					</thead>
+					<tbody class="bodyBox">
+					</tbody>
+				</table>
+				<p class="allMoney">总价： <span class="totalMoney"></span> </p>
+			</div>
+		</div>
+    
+    
+	<!-- 底部 -->
+			<div class="bottom_synopsis" id="footer_add_nav">
+				<div class="footer_add">
+				<div class="footer_img_right fl phone_synopsis_box">
+							<div class="fl index_icon bottom_synopsis_icon_02">&nbsp;</div>				
+							<div class="fl phone_synopsis">
+								<h3><a href="#" target="_blank">手机注册 一步搞定</a></h3>				
+								<p>输入手机号-输入验证码-获取手机</p>
+								<p>验证码-设定密码-完成注册</p>
+							</div>				
+							<div class="crl">&nbsp;</div>
+						</div>				
+						<div class="footer_img_right fl tel_synopsis_box">
+							<div class="fl index_icon bottom_synopsis_icon_03">&nbsp;</div>				
+							<div class="fl tel_synopsis">
+								<h3><a href="#" target="_blank">型录/电商/新媒体视频招商加盟</a></h3>				
+								<p>柳小姐：0791-88110022-8126</p>
+							</div>				
+							<div class="crl">&nbsp;</div>
+						</div>				
+						<div class="footer_img_right fl qq_synopsis_box">
+							<!-- <div class="#">&nbsp;</div> -->
+							<div class="fl index_icon bottom_synopsis_icon_04">&nbsp;</div>
+								<div class="fl qq_synopsis">
+								<h3><a href="#" target="_blank">在线客服</a></h3>				
+								<p>24小时客服热线:</p>
+								<p>4001-677-077</p>
+						</div>				
+							<div class="crl">&nbsp;</div>
+						</div>				
+						<div class="crl">&nbsp;</div>
+					</div>
+				</div>
+				<div class="helpLink wp">
+	<div class="w clearfix">
+	<div class="FSIntro"><a href="#"><img alt="#" src="http://www.fstvgo.com/images/fengshangimg/FSBreif.jpg" /></a>
+	<h4><a href="#" target="_blank">关于风尚购物</a></h4>	
+	<p>江西风尚电视购物股份有限公司于2009年9月28日正式成立，公司致力于现代家庭电视购物，是传媒和零售的完美组合。江西电视台风尚购物频道是经国家广电总局批准的全国性的、同时也是江西第一家真正的专业家庭电视购物频道。</p>
+	</div>	
+	<dl>
+		<dt>帮助中心</dt>
+		<dd><a href="#" target="_blank">购物流程</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">积分规则</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">积分绑定</a></dd>
+		<dd><a href="#" target="_blank">使用订单状态说明</a></dd>
+	</dl>	
+	<dl>
+		<dt>配送方式</dt>
+		<dd><a href="#" target="_blank">免费配送地区</a></dd>
+		<dd><a href="#" target="_blank">配送范围</a></dd>
+		<dd style="display:none;"><a href="#" target="_blank">收费标准</a></dd>
+	</dl>	
+	<dl>
+		<dt>支付方式</dt>
+		<dd><a href="#" target="_blank">货到付款</a></dd>
+		<dd><a href="#" target="_blank">银联支付</a></dd>
+		<dd><a href="#" target="_blank">支付宝</a></dd>
+		<dd><a href="#" target="_blank">微信支付</a></dd>
+	</dl>	
+	<dl>
+		<dt>客户服务</dt>
+		<dd><a href="#" target="_blank">售后及退换货</a></dd>
+		<dd><a href="#" target="_blank">在线客服</a></dd>
+	</dl>	
+	<dl>
+		<dt>会员中心</dt>
+		<dd><a href="#" target="_blank">资料修改</a></dd>
+		<dd><a href="#" target="_blank">找回密码</a></dd>
+		<dd><a href="#" target="_blank">会员等级</a></dd>
+		<dd><a href="#" target="_blank">会员权益 </a></dd>
+	</dl>	
+	<dl>
+		<dt>招商专区</dt>
+		<dd><a href="#" target="_blank">关于我们</a></dd>
+		<dd><a href="#" target="_blank">合作流程</a></dd>
+		<dd><a href="#" target="_blank">联系我们</a></dd>
+		<dd><a href="#" target="_blank">供应商系统</a></dd>
+	</dl>
+	</div>
+	</div>	
+	<div class="wp siteLink">	
+		<p class="w"><a href="#" target="_blank">ICP经营许可证：赣ICP备15000001号</a></p>	
+		<p class="w ww"><a><img class="one" src="http://www.fstvgo.com/images/FS/unionpay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/alipay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/weChatPay.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/ICPNum.jpg" /></a> <a><img src="http://www.fstvgo.com/images/FS/TrustSite.jpg" /></a></p>
+	</div>	
+	<div class="wp copyRight">
+		<p class="w"></p>
+	</div>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		//放大镜
+		$(".mask").mouseover(function() {
+		$(".float_layer").show()
+		$(".big_box").show()
+		})
+		$(".mask").mouseout(function() {
+			$(".float_layer").hide()
+			$(".big_box").hide()
+		})
+
+
+
+		$(".mask").mousemove(function(e) {
+			var l = e.pageX - $(".small_box").offset().left - ($(".float_layer").width() / 2)
+			var t = e.pageY - $(".small_box").offset().left - ($(".float_layer").height() / 2)
+			if (l < 0) {
+				l = 0
+			}
+			if (l > $(this).width() - $(".float_layer").width()) {
+				l = $(this).width() - $(".float_layer").width()
+			}
+			if (t < 0) {
+				t = 0
+			}
+			if (t > $(this).height() - $(".float_layer").height()) {
+				t = $(this).height() - $(".float_layer").height()
+			}
+
+			$(".float_layer").css({
+				"left": l,
+				"top": t
+			})
+			var pX = l / ($(".mask").width() - $(".float_layer").width())
+			var pY = t / ($(".mask").height() - $(".float_layer").height())
+			$(".big_box img").css({
+				"left": -pX * ($(".big_box img").width() - $(".big_box").width()),
+				"top": -pY * ($(".big_box img").height() - $(".big_box").height())
+			})
+
+
+
+		})
+		
+		
+		// 购物车
+		function Index() {
+			this.dom = {
+				rightBox: $('.rightBox'),
+				tbody: $('.bodyBox'),
+				totalMoney: $('.totalMoney'),
+				addShop: $('.addShop')
+			}
+			this.obj = {
+				money: 0,
+				name: '',
+				data: [],
+				totalMoney: 0
+			}
+			this.bindEvent();
+		}
+
+		Index.prototype.bindEvent = function() {
+			var self = this;
+			self.dom.addShop.on('click', function() {
+				var $this = $(this);
+				self.dom.rightBox.css('display', 'block');
+				self.obj.money = $this.siblings('.money').html();
+				self.obj.name = $this.siblings('.name').html();
+				self.addJson(self.obj);
+				self.addHtml();
+			})
+			
+		};
+		Index.prototype.addJson = function(obj) {
+			var self = this;
+			var data = self.obj.data;
+			for (var j = 0; j < data.length; j++) {
+				if (data[j].name == obj.name) {
+					data[j].num++;
+					return;
+				}
+			}
+			data.push({
+				name: obj.name,
+				money: obj.money,
+				num: 1
+			});
+		}
+		Index.prototype.addHtml = function() {
+			var self = this;
+			var textHtml = '';
+			var data = self.obj.data;
+			var tbody = self.dom.tbody;
+			var totalMoney = self.obj.totalMoney;
+			tbody.html('');
+			for (var i = 0; i < data.length; i++) {
+				textHtml += '<tr><td>' + data[i].name + '</td><td>' +
+					data[i].money + '</td><td><a class="reduce">-</a>' + data[i].num + ' ';
+				textHtml += '<a class="addNum">+</a></td><td>￥' + (data[i].num * data[i].money).toFixed(2) + '</td></tr>';
+				totalMoney += data[i].num * data[i].money;
+				self.dom.totalMoney.text('￥' + totalMoney.toFixed(2));
+			}
+			tbody.append(textHtml);
+			self.bindSign();
+			alert('您已成功将商品加入购物车中！');
+		}
+		Index.prototype.bindSign = function() {
+			var self = this;
+			var data = self.obj.data;
+			$('.addNum').on('click', function() {
+				var index = $(this).parents('tr').index();
+				data[index].num++;
+				self.addHtml();
+			})
+			$('.reduce').on('click', function() {
+				var index = $(this).parents('tr').index();
+				data[index].num--;
+				if (data[index].num == 0) {
+					data.splice(index, 1);
+				}
+				if (data.length == 0) {
+					self.dom.totalMoney.text(0);
+					self.dom.rightBox.css('display', 'none');
+				}
+				self.addHtml();
+			})
+		}
+		new Index();
+		
+	</script>
+</body>
+</html>

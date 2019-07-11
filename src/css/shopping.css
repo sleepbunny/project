@@ -1,0 +1,36 @@
+/*
+Error: Invalid CSS after "	 }": expected selector or at-rule, was "}"
+        on line 267 of D:\HBuilderProjects\HelloHBuilder\project\src\sass\shopping.scss
+
+262: 			
+263: 			}
+264: 			}
+265: 		 }
+266: 	 }
+267: }
+268: .helpLink {
+269: 	width: 100%;
+270:     background-color: #fff;
+271:     padding-top: 20px;
+272:     font-size: 14px;
+
+Backtrace:
+D:\HBuilderProjects\HelloHBuilder\project\src\sass\shopping.scss:267
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:42:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	 }\": expected selector or at-rule, was \"}\"\A         on line 267 of D:\HBuilderProjects\HelloHBuilder\project\src\sass\shopping.scss\A \A 262: 			\A 263: 			}\A 264: 			}\A 265: 		 }\A 266: 	 }\A 267: }\A 268: .helpLink {\A 269: 	width: 100%;\A 270:     background-color: #fff;\A 271:     padding-top: 20px;\A 272:     font-size: 14px;"; }
